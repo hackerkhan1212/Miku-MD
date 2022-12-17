@@ -7,28 +7,31 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918101187835']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
-global.OwnerNumber = ['918101187835']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
-global.ownertag = ['918101187835']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
-global.BotName = "Miku"
-global.packname = "Miku bot"
-global.author = "By: Fantox"
-global.OwnerName = "Fantox"
-global.BotSourceCode = "https://github.com/FantoX001/Miku-MD" // -- Please don't change -- //
-global.SupportGroupLink = "https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"  // -- Please don't change -- //
-global.sessionName = "session"  // -- Don't change otherwise bot will not work -- //
+global.Owner = ['923229931076']
+global.OwnerNumber = ['923229931076']
+global.ownertag = ['923229931076']
+global.BotName = "Itx_Ibrahim_Bot"
+global.packname = "Ibrahim"
+global.author = "By: Ibrahim"
+global.OwnerName = "Ibrahim"
+global.BotSourceCode = "https://github.com/Thewiskey"
+global.SupportGroupLink = "https://chat.whatsapp.com/"
+global.sessionName = "session"
+
+global.keysZens = ['285c513f6556', '68637855ac', '66aa575454', 'ead81e891b', '8331b843f7', 'ec3fe6f05831', '0c65d4c037']
+global.zenzkey = keysZens[Math.floor(keysZens.length * Math.random())]
 
 
 
-global.prefa = ['-'] // Prefix ---  change it to anythong you want except '@' //
+global.prefa = ['-'] // Prefix ---  change it to anythong you want except @//
 
 
-global.location = "West Bengal, India"
+global.location = "Kpk, Pakistan"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://github.com/FantoX001"
-global.lolhuman = "KaysaS"
+global.websitex = "https://github.com/Thewiskey"
+global.lolhuman = "85faf717d0545d14074659ad"
 
 
 global.BotLogo = fs.readFileSync("./Assets/pic1.jpg")
@@ -98,7 +101,7 @@ global.APIs = {
 	zenz: 'https://zenzapis.xyz',
 }
 global.APIKeys = {
-	'https://zenzapis.xyz': '5d1197db351b',
+	'https://zenzapis.xyz': '{global.zenzkey}',
 }
 
 
