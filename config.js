@@ -29,7 +29,7 @@ global.prefa = ['-'] // Prefix ---  change it to anythong you want except @//
 global.location = "Kpk, Pakistan"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
-global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
+global.vidmenu = { url: 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4' }
 global.websitex = "https://github.com/Thewiskey"
 global.lolhuman = "85faf717d0545d14074659ad"
 
