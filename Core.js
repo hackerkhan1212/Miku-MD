@@ -547,14 +547,14 @@ limit: limitUser,
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
 	    if (setting) {
 		if (!isNumber(setting.status)) setting.status = 0
-		if (!('autobio' in setting)) setting.autobio = false
+		if (!('autobio' in setting)) setting.autobio = true
 		if (!('templateImage' in setting)) setting.templateImage = false
 		if (!('templateGif' in setting)) setting.templateGif = false
 		if (!('templateMsg' in setting)) setting.templateMsg = false
 		if (!('templateDocument' in setting)) setting.templateDocument = true
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
-		autobio: false,
+		autobio: true,
 		templateImage: false,
 		templateGif: false,
 		templateMsg: false,
@@ -716,6 +716,16 @@ if (m.mtype === 'groupInviteMessage') {
 teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* to get owner number and ask him.`
 sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "916909137213@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
 }
+	if (db.data.settings[botNumber].autobio) {
+	    let setting = global.db.data.settings[botNumber]
+	    if (new Date() * 1 - setting.status > 1000) {
+		let _uptime = process.uptime() * 1000
+		let uptime = clockString(_uptime)
+		await Miku.updateProfileStatus(`I am Ibrahim-Bot | Active During ${uptime} ⏳ | Mode : ${Miku.public ? 'Public-Mode 👥' : 'Self-Mode 👤'} | User : ${Object.keys(global.db.data.users).length} 👥| Don't call bot 📞 | © Created Ibrahim`).catch(_ => _)
+		setting.status = new Date() * 1
+	    }
+	}
+	
 
 
 if (AntiLink) {
@@ -1523,7 +1533,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nahegao, ass, bdsm, cuckold, cum, ero, femdom, gangbang, foot, glasses, hentai, masturbation, orgy, panties, pussy, tentacles, things, yuri ,nsfwloli, blowjobgif, hentaivideo, trap, hneko, hwaifu`)
+        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\ahegao, ass, bdsm, blowjob, cum, cuckold, ero, femdom, foot, gangbang, glasses, hentai, hentaigif, jahy, maid, manga, neko, orgy, panties, pussy, sfwneko, tentacles, thighs, hollolewd, sideoppai, animefeets, animebooty, animethighss, animearmpits, lewdanimegirls, biganimetiddies, yuri, zettairyouiki, lewd, eron, solo, anal, keta, tits, kuni, solog, erok, feetg, lewdk, erofeet, holoero, classic, erokemo, futanari, eroyuri, yaoi`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -3866,14 +3876,15 @@ case 'truth':
 
 //let bjif = await GIFBufferToVideoBuffer(bjf) 
 
-case 'nsfwloli' :  {
+case 'hollolewd' : case 'sideoppai' : case 'animefeets|' : case 'animebooty' :
+case 'animethighss' : case 'animearmpits' : case 'lewdanimegirls' : case 'biganimetiddies' :{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
     if (!AntiNsfw) return reply(mess.nonsfw)
     
 reply(mess.waiting)
- waifudhgd = await getBuffer(`https://api-reysekha.herokuapp.com/api/wallpaper/${command}?apikey=APIKEY  `)     
+ waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${global.lolkey}`)     
  let nsfwapireply = [
     {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
     ]
@@ -3890,10 +3901,12 @@ reply(mess.waiting)
 break
 
 
-case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 'ero' :
-    case 'femdom' : case 'gangbang' : case 'foot' : case 'glasses':  case 'hentai': 
-     case 'masturbation': case 'neko': case 'orgy': case 'panties': 
-    case 'pussy': case 'tentacles': case 'things': case 'yuri': 
+case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
+		case 'cuckold' : case 'ero' : case 'femdom' : case 'foot' : 
+		case 'gangbang' : case 'glasses' : case 'hentai' : case 'hentaigif' : 
+		case 'jahy' : case 'maid' : case 'manga' : case 'neko' :
+		case 'orgy' : case 'panties' : case 'pussy' : case 'sfwneko' :
+		case 'tentacles' : case 'thighs' : case 'yuri' : case 'zettairyouiki' :
 {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -3901,7 +3914,33 @@ case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 
     if (!AntiNsfw) return reply(mess.nonsfw)
     
     reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://api-reysekha.herokuapp.com/api/nsfw/${command}?apikey=APIKEY`)     
+     waifudhgd = await getBuffer(`https://zenzapis.xyz/api/morensfw/${command}?apikey=${global.zenzkey}`)     
+     let nsfwapireply = [
+        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: waifudhgd,
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+    break
+    case 'lewd' : case 'eron' : case 'anal' : case 'keta' : case 'tits' :
+		case 'kuni' : case 'solog' : case 'erok' : case 'feetg' : 
+		case 'lewdk' : case 'erofeet' : case 'holoero' : case 'classic' : 
+		case 'erokemo' : case 'futanari' : case 'eroyuri' : case 'yaoi' :
+{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    if (!m.isGroup) return replay(mess.grouponly)
+    if (!AntiNsfw) return reply(mess.nonsfw)
+    
+    reply(mess.waiting)
+     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${global.lolkey}`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
@@ -4737,7 +4776,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
+I am *Itx_Ibrahim*, a bot developed by *Fantox*.
 
 🔰 My prefix is:  ${prefix}
 
