@@ -93,7 +93,7 @@ global.limitawal = {
 }
 global.limitawal = {
     rakyat: "Infinity",
-    free: 100
+    free: 10
 }
 
 
