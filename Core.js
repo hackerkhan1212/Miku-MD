@@ -4921,7 +4921,7 @@ if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return replay("Give valid link")
          reply(mess.waiting)
          let anu = await getBuffer('https://saipulanuar.ga/api/download/ssweb2?url=${args.join(" ")}')
-         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })}
 		 break
 //////////////////////////////////////////////			 
 			 case 'attp': case 'ttp': {
