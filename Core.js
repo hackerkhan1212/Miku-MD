@@ -4913,7 +4913,7 @@ if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return replay("Give valid link")
          reply(mess.waiting)
          let anu = await getBuffer('https://saipulanuar.ga/api/download/ssweb?url=${args.join(" ")}')
-         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })}
 		 break
 		 case '1ssweb':  case '1screenshot': {
 if (isBan) return reply(mess.banned)
