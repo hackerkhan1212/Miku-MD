@@ -3689,6 +3689,15 @@ let buttons = [
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
 }
 break
+		    case 'soundcloud': case 'scdl': {
+     if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+                if (!args.join(" ")) throw 'No Link given'
+                m.reply(mess.wait)
+                let anu = await fetchJson(`https://api.lolhuman.xyz/api/soundcloud?apikey=${global.lolhuman}&url=${args.join(" ")}`)
+                Miku.sendMessage(m.chat, { audio: { url: anu.result.link }, mimetype: 'audio/mpeg', `⭔ Title : ${anu.result.title}`, fileName: anu.result.title+'.m4a' }, { quoted: fvn })
+            }
+	    break
 
 case 'soulmate': {
     if (isBan) return reply(mess.banned)
@@ -5051,7 +5060,7 @@ bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, 
 
  *━━━〈  🌌 Downloader 🌌  〉━━━*
 
-play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
+play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire, soundcloud  
 
  *━━━〈  🎗 Tools 🎗  〉━━━*
  
