@@ -1744,17 +1744,18 @@ break
                 if (isAdmins) return m.reply(`Ehh Sorry You're Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Sorry You're My Owner 😅`)
                 Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+		    break
 
-//case 'animesearchxxx': case 'anime'
-//if (!AntiNsfw) return reply(mess.nonsfw):{
-    //await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
-    //.then((res) => {
-   // let txt = `   _Anime Search Engine_ \n\n*Title:* *${res.data.title}*\n*English:* *${res.data.title_english}*\n*Japanese:* *${res.data.title_japanese}*\n*Anime Type:* *${res.data.type}*\n*Adaptation:* *${res.data.source}*\n*Total Episode:* *${res.data.episodes}*\n*Status:* *${res.data.status}*\n*Ongoing:* *${res.data.airing ? 'Yes' : 'No'}*\n*Aired:* *${res.data.aired.string}*\n*Duration:* *${res.data.duration}*\n*Rating:* *${res.data.rating}*\n*Score:* *${res.data.score}*\n*Rank:* *${res.data.rank}*\n*Main Producer:* *${res.data.producers.name}*\n*Studio:* *${res.data.studios[0].name}* `
-   // Miku.sendMessage(from, { image : { url : res.data.images.jpg.image_url}, caption : txt}, {quoted :m }) 
-   // })
+/*
+case 'animesearchxxx': case 'anime':{
+    await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
+    .then((res) => {
+    let txt = `   _Anime Search Engine_ \n\n*Title:* *${res.data.title}*\n*English:* *${res.data.title_english}*\n*Japanese:* *${res.data.title_japanese}*\n*Anime Type:* *${res.data.type}*\n*Adaptation:* *${res.data.source}*\n*Total Episode:* *${res.data.episodes}*\n*Status:* *${res.data.status}*\n*Ongoing:* *${res.data.airing ? 'Yes' : 'No'}*\n*Aired:* *${res.data.aired.string}*\n*Duration:* *${res.data.duration}*\n*Rating:* *${res.data.rating}*\n*Score:* *${res.data.score}*\n*Rank:* *${res.data.rank}*\n*Main Producer:* *${res.data.producers.name}*\n*Studio:* *${res.data.studios[0].name}* `
+    Miku.sendMessage(from, { image : { url : res.data.images.jpg.image_url}, caption : txt}, {quoted :m }) 
+    })
     }
-   // break
-
+    break
+*/
 
 case 'coffee': case 'kopi': {
         if (isBan) return reply(mess.banned)	 			
