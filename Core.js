@@ -3694,7 +3694,7 @@ break
                 if (!args.join(" ")) throw 'No Link given'
                 m.reply(mess.wait)
                 let anu = await fetchJson(`https://api.lolhuman.xyz/api/soundcloud?apikey=${global.lolhuman}&url=${args.join(" ")}`)
-                Miku.sendMessage(m.chat, { audio: { url: anu.result.link }, mimetype: 'audio/mpeg',  fileName: anu.result.title+'.m4a' caption: `${anu.result.title}` }, { quoted: fvn })
+                Miku.sendMessage(m.chat, { audio: { url: anu.result.link }, mimetype: 'audio/mpeg',  fileName: anu.result.title+'.m4a' }, { quoted: fvn })
             }
 	    break
 
