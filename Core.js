@@ -3941,7 +3941,6 @@ case 'hollolewd' : case 'sideoppai' : case 'animefeets|' : case 'animebooty' :
 case 'animethighss' : case 'animearmpits' : case 'lewdanimegirls' : case 'biganimetiddies' :{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
     if (!AntiNsfw) return reply(mess.nonsfw)
     
 reply(mess.waiting)
@@ -3971,7 +3970,6 @@ case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
 {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
     if (!AntiNsfw) return reply(mess.nonsfw)
     
     reply(mess.waiting)
@@ -3996,8 +3994,7 @@ case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
 		case 'erokemo' : case 'futanari' : case 'eroyuri' : case 'yaoi' :
 {
     if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
+    if (isBanChat) return reply(mess.bangc) 
     if (!AntiNsfw) return reply(mess.nonsfw)
     
     reply(mess.waiting)
@@ -4022,7 +4019,6 @@ case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
 case 'blowjobgif': case 'bj' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
     if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
 bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)         
@@ -4036,7 +4032,6 @@ break
 case 'hentaivid': case 'hentaivideo': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
     if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
 anu = await hentai()
@@ -4049,7 +4044,6 @@ case 'trap' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
-    if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
  let trapbot = [
@@ -4070,7 +4064,6 @@ case 'hentai-neko' :
 case 'hneko' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
     if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
@@ -4087,12 +4080,33 @@ reply(mess.waiting)
                     return('Error!')
                 })
 break
+		case 'xximage' :
+{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+	if (!AntiNsfw) return reply(mess.nonsfw)
+	if (!args.join(" ")) return replay("Example xximage Tits")
+    reply(mess.waiting)
+     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/gimage?apikey=${global.lolhuman}&query=${args.join(" ")`)     
+     let nsfwapireply = [
+        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: waifudhgd,
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+	break
 
 case 'hentai-waifu' :
 case 'hwaifu' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
     if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
@@ -4112,6 +4126,70 @@ break
 
 
 /////////////////////////// NFFW end /////////////////////
+		
+		case '1wallpaper' :
+{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+	if (!args.join(" ")) return replay("Example -1wallpaper Pubg")
+    reply(mess.waiting)
+     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=${global.lolhuman}&query=${args.join(" ")`)     
+     let nsfwapireply = [
+        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: waifudhgd,
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+	break
+	case '2wallpaper' :
+{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+	if (!args.join(" ")) return replay("Example -2wallpaper Pubg")
+	reply(mess.waiting)
+     waifudhgd = await axios.get(`https://api.lolhuman.xyz/api/wallpaper2?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
+     let nsfwapireply = [
+        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: {url:waifudd.data.result},
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+	break
+	case '3wallpaper' :
+{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    reply(mess.waiting)
+	if (!args.join(" ")) return replay("Example -3wallpaper Pubg")
+     waifudhgd = await axios.get(`https://api.lolhuman.xyz/api/w${global.lolhuman}&query=${args.join(" ")}`)     
+     let nsfwapireply = [
+        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: {url:waifudd.data.result},
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+	break
 
 case 'smug2':
     if (isBan) return reply(mess.banned)	 			
