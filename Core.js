@@ -1743,7 +1743,9 @@ break
                 if (!isBotAdmins) return m.reply(`Ehh Bot Not Admin T_T`)
                 if (isAdmins) return m.reply(`Ehh Sorry You're Admin 😁`)
                 if (isCreator) return m.reply(`Ehh Sorry You're My Owner 😅`)
-                Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+                Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove') 
+	      }
+        }
 		    break
 
 /*
@@ -1773,9 +1775,6 @@ case 'coffee': case 'kopi': {
                     Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
                 }
                 break
-
- 
-
 case 'emojimix': {
 	   if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
