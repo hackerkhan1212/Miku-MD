@@ -1735,9 +1735,19 @@ sections
 )  
 }
 break
+		//AntiVirtex
+        if (db.data.chats[m.chat].antivirtex) {
+            if (budy. length > 3500) {
+                m.reply(`Someone sent spam virus!! mark as read⚠️\n`.repeat(300))
+                m.reply(`「ANTI VIRTEX 」\n\nYou Are Detected Sending Virtex, Sorry You Will Be Kicked !`)
+                if (!isBotAdmins) return m.reply(`Ehh Bot Not Admin T_T`)
+                if (isAdmins) return m.reply(`Ehh Sorry You're Admin 😁`)
+                if (isCreator) return m.reply(`Ehh Sorry You're My Owner 😅`)
+                Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 
-/*
-case 'animesearchxxx': case 'anime':{
+
+case 'animesearchxxx': case 'anime'
+if (!AntiNsfw) return reply(mess.nonsfw):{
     await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
     .then((res) => {
     let txt = `   _Anime Search Engine_ \n\n*Title:* *${res.data.title}*\n*English:* *${res.data.title_english}*\n*Japanese:* *${res.data.title_japanese}*\n*Anime Type:* *${res.data.type}*\n*Adaptation:* *${res.data.source}*\n*Total Episode:* *${res.data.episodes}*\n*Status:* *${res.data.status}*\n*Ongoing:* *${res.data.airing ? 'Yes' : 'No'}*\n*Aired:* *${res.data.aired.string}*\n*Duration:* *${res.data.duration}*\n*Rating:* *${res.data.rating}*\n*Score:* *${res.data.score}*\n*Rank:* *${res.data.rank}*\n*Main Producer:* *${res.data.producers.name}*\n*Studio:* *${res.data.studios[0].name}* `
@@ -1745,7 +1755,7 @@ case 'animesearchxxx': case 'anime':{
     })
     }
     break
-*/
+
 
 case 'coffee': case 'kopi': {
         if (isBan) return reply(mess.banned)	 			
@@ -2956,10 +2966,9 @@ case 'togif': case 'getgif':{
 case 'translate': case 'trans': {
     if (isBan) return reply(mess.banned)
     if (!args.join(" ")) return replay("Pls enter any text to translate")
-    tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
-    Infoo = tes.info
-    Detek = tes.translate
-    replay(`Input : ${Detek}\nTranslation Results : ${Infoo}`)
+    tes = await fetchJson (`https://saipulanuar.ga/api/translate2?text=${args.join(" ")}&from=id&to=en`)
+    Infoo = tes.hasil
+   replay(`\nTranslation Results : ${Infoo}`)
     }
     break
 
@@ -4089,7 +4098,7 @@ break
     reply(mess.waiting)
      waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/gimage?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
      let nsfwapireply = [
-        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `${prefix}xximage ${args.join(" ")}`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let nsfwapimess = {
        image: waifudhgd,
@@ -4135,7 +4144,7 @@ case '1wallpaper' :
     reply(mess.waiting)
      waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
      let nsfwapireply = [
-        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `${prefix}1wallpaper ${args.join(" ")}`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let nsfwapimess = {
        image: waifudhgd,
@@ -4147,50 +4156,7 @@ case '1wallpaper' :
                         return('Error!')
                     })
                 }
-	break
-	case '2wallpaper' :
-{
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-	if (!args.join(" ")) return replay("Example -2wallpaper Pubg")
-	reply(mess.waiting)
-     waifudhgd = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper2?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
-     let nsfwapireply = [
-        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
-        ]
-      let nsfwapimess = {
-       image: {url:waifudd.result},
-       caption:  `Here it is...`,
-      buttons: nsfwapireply,
-      headerType: 1
-      }     
-                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
-                        return('Error!')
-                    })
-                }
-	break
-	case '3wallpaper' :
-{
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-    reply(mess.waiting)
-	if (!args.join(" ")) return replay("Example -3wallpaper Pubg")
-     waifudhgd = await fetchJson(`https://api.lolhuman.xyz/api/w${global.lolhuman}&query=${args.join(" ")}`)     
-     let nsfwapireply = [
-        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
-        ]
-      let nsfwapimess = {
-       image: {url:waifudd.result},
-       caption:  `Here it is...`,
-      buttons: nsfwapireply,
-      headerType: 1
-      }     
-                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
-                        return('Error!')
-                    })
-                }
-	break
-
+		break
 case 'smug2':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
