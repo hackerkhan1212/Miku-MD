@@ -4087,7 +4087,7 @@ break
 	if (!AntiNsfw) return reply(mess.nonsfw)
 	if (!args.join(" ")) return replay("Example xximage Tits")
     reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/gimage?apikey=${global.lolhuman}&query=${args.join(" ")`)     
+     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/gimage?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
@@ -4133,7 +4133,7 @@ break
     if (isBanChat) return reply(mess.bangc)
 	if (!args.join(" ")) return replay("Example -1wallpaper Pubg")
     reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=${global.lolhuman}&query=${args.join(" ")`)     
+     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
