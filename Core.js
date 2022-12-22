@@ -1651,7 +1651,7 @@ case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
         ]
         let buttonMessage = {
             text: `_${hasil.quotes}_\n\nBy '${hasil.karakter}', ${hasil.anime}\n\n- ${hasil.up_at}`,
-            footer: 'Miku',
+            footer: 'Ibrahim',
             buttons: buttons,
             headerType: 2
         }
@@ -4915,7 +4915,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Itx_Ibrahim*, a bot developed by *Fantox*.
+I am *Itx_Ibrahim*, a bot developed by *Ibrahim*.
 
 🔰 My prefix is:  ${prefix}
 
@@ -4941,7 +4941,7 @@ antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, ant
 
  *━━━〈  🔍 Search 🔍  〉━━━*
 
-play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
+play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone, 1wallpaper, 2wallpaper, 3wallpaper  
 
  *━━━〈  🔰 Convert 🔰  〉━━━*
 
@@ -4989,7 +4989,7 @@ qr, say, translate, fliptext, toletter, weather
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
+ Powered by: *Ibrahim*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
