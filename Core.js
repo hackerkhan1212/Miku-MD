@@ -1522,19 +1522,19 @@ replay('This Group has been *unbanned* from using me!')
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:* http://gg.gg/MikuSupport`)
+    reply(`*My developer's group:* http://gg.gg/`)
     break
 
 case 'repo': case 'botrepo':
     
-    reply(`*My Source Code:* https://github.com/FantoX001/Miku-MD`)
+    reply(`*My Source Code:* https://github.com/Ibrahim`)
     break
 
 case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\ahegao, ass, bdsm, blowjob, cum, cuckold, ero, femdom, foot, gangbang, glasses, hentai, hentaigif, jahy, maid, manga, neko, orgy, panties, pussy, sfwneko, tentacles, thighs, hollolewd, sideoppai, animefeets, animebooty, animethighss, animearmpits, lewdanimegirls, biganimetiddies, yuri, zettairyouiki, lewd, eron, solo, anal, keta, tits, kuni, solog, erok, feetg, lewdk, erofeet, holoero, classic, erokemo, futanari, eroyuri, yaoi`)
+        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\ahegao, ass, bdsm, blowjob, cum, cuckold, ero, femdom, foot, gangbang, glasses, hentai, hentaigif, jahy, maid, manga, neko, orgy, panties, pussy, sfwneko, tentacles, thighs, hollolewd, sideoppai, animefeets, animebooty, animethighss, animearmpits, lewdanimegirls, biganimetiddies, yuri, zettairyouiki, lewd, eron, solo, anal, keta, tits, kuni, solog, erok, feetg, lewdk, erofeet, holoero, classic, erokemo, futanari, eroyuri, yaoi, xximage`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -3500,7 +3500,7 @@ break
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _Miku Youtube Downloader 2.0_  」
+ caption: `「  _Ibrahim Youtube Downloader 2.0_  」
 
 *Title :* ${anu.title}
 
@@ -4127,13 +4127,13 @@ break
 
 /////////////////////////// NFFW end /////////////////////
 		
-		case '1wallpaper' :
+case '1wallpaper' :
 {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 	if (!args.join(" ")) return replay("Example -1wallpaper Pubg")
     reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
+     waifudhgd = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=${global.lolhuman}&query=${args.join(" ")`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
@@ -4154,12 +4154,12 @@ break
     if (isBanChat) return reply(mess.bangc)
 	if (!args.join(" ")) return replay("Example -2wallpaper Pubg")
 	reply(mess.waiting)
-     waifudhgd = await axios.get(`https://api.lolhuman.xyz/api/wallpaper2?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
+     waifudhgd = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper2?apikey=${global.lolhuman}&query=${args.join(" ")}`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let nsfwapimess = {
-       image: {url:waifudd.data.result},
+       image: {url:waifudd.result},
        caption:  `Here it is...`,
       buttons: nsfwapireply,
       headerType: 1
@@ -4175,12 +4175,12 @@ break
     if (isBanChat) return reply(mess.bangc)
     reply(mess.waiting)
 	if (!args.join(" ")) return replay("Example -3wallpaper Pubg")
-     waifudhgd = await axios.get(`https://api.lolhuman.xyz/api/w${global.lolhuman}&query=${args.join(" ")}`)     
+     waifudhgd = await fetchJson(`https://api.lolhuman.xyz/api/w${global.lolhuman}&query=${args.join(" ")}`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let nsfwapimess = {
-       image: {url:waifudd.data.result},
+       image: {url:waifudd.result},
        caption:  `Here it is...`,
       buttons: nsfwapireply,
       headerType: 1
