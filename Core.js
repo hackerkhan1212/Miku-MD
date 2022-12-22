@@ -1534,7 +1534,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\ahegao, ass, bdsm, blowjob, cum, cuckold, ero, femdom, foot, gangbang, glasses, hentai, hentaigif, jahy, maid, manga, neko, orgy, panties, pussy, sfwneko, tentacles, thighs, hollolewd, sideoppai, animefeets, animebooty, animethighss, animearmpits, lewdanimegirls, biganimetiddies, yuri, zettairyouiki, lewd, eron, solo, anal, keta, tits, kuni, solog, erok, feetg, lewdk, erofeet, holoero, classic, erokemo, futanari, eroyuri, yaoi, xximage`)
+        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\ahegao, ass, bdsm, blowjob, cum, cuckold, ero, femdom, foot, nudeloli, gangbang, glasses, hentai, hentaigif, jahy, maid, manga, neko, orgy, panties, pussy, sfwneko, tentacles, thighs, hollolewd, sideoppai, animefeets, animebooty, animethighss, animearmpits, lewdanimegirls, biganimetiddies, yuri, zettairyouiki, lewd, eron, solo, anal, keta, tits, kuni, solog, erok, feetg, lewdk, erofeet, holoero, classic, erokemo, futanari, eroyuri, yaoi, xximage`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -3997,6 +3997,31 @@ case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
                     })
                 }
     break
+		    
+		    case 'nudeloli' :
+{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    if (!AntiNsfw) return reply(mess.nonsfw)
+    
+    reply(mess.waiting)
+     waifudhgd = await getBuffer(`https://saipulanuar.ga/api/nsfwloli`)     
+     let nsfwapireply = [
+        {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: waifudhgd,
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+    break
+				
+		    
     case 'lewd' : case 'eron' : case 'anal' : case 'keta' : case 'tits' :
 		case 'kuni' : case 'solog' : case 'erok' : case 'feetg' : 
 		case 'lewdk' : case 'erofeet' : case 'holoero' : case 'classic' : 
