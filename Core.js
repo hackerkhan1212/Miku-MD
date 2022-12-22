@@ -4872,8 +4872,111 @@ Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 }
 replay('Broadcast Sent !')
 }
-break    
-
+break  
+////////////////////////////////////////////////////////////////		    
+		    case 'ssweb':  case 'screenshot': {
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+if (!args.join(" ")) return replay("Give valid link")
+         reply(mess.waiting)
+         let anu = await getBuffer('https://saipulanuar.ga/api/download/ssweb?url=${args.join(" ")}')
+         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })
+		 break
+		 case '1ssweb':  case '1screenshot': {
+if (isBan) return reply(mess.banned)
+if (isBanChat) return reply(mess.bangc)
+if (!args.join(" ")) return replay("Give valid link")
+         reply(mess.waiting)
+         let anu = await getBuffer('https://saipulanuar.ga/api/download/ssweb2?url=${args.join(" ")}')
+         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })
+		 break
+//////////////////////////////////////////////			 
+			 case 'attp': case 'ttp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			 	 case '1attp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/attp2?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			 case '2attp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/attp?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			 	 case '1ttp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			 case '2ttp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp2?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			  case '3ttp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp3?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			 case '4ttp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp4?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			  case '5ttp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp5?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			 case '6ttp': {
+         if (isBan) return reply(mess.banned)
+         if (isBanChat) return reply(mess.bangc)
+         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
+            m.reply(mess.wait)
+           if (!text) throw `Try : ${prefix + command} text`
+           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp6?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
+         }
+			 break
+			
+			 
+			 
+			 
+////////////////////////////////////////////////////
 
 case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
@@ -4925,6 +5028,14 @@ bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, 
 
 play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
 
+ *━━━〈  🎗 Tools 🎗  〉━━━*
+ 
+ ssweb, ssweb1, translate 
+ 
+ *━━━〈  🎗 Sticker 🎗  〉━━━*
+ 
+ attp(1-2), ttp(1-6)
+ 
  *━━━〈  🈴 Weeb 🈴  〉━━━*
 
 crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
@@ -4943,7 +5054,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
  *━━━〈  🪁 Essentials 🪁  〉━━━*
 
-qr, say, translate, fliptext, toletter, weather
+qr, say, fliptext, toletter, weather
 
  *━━━〈  💥 NSFW 💥  〉━━━*
 
