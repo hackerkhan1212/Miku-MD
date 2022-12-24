@@ -4907,23 +4907,49 @@ replay('Broadcast Sent !')
 }
 break  
 ////////////////////////////////////////////////////////////////		    
-		    case 'ssweb':  case 'screenshot': {
-if (isBan) return reply(mess.banned)
-if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return replay("Give valid link")
-         reply(mess.waiting)
-         let anu = await getBuffer('https://saipulanuar.ga/api/download/ssweb?url=${args.join(" ")}')
-         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })}
-		 break
-		 case '1ssweb':  case '1screenshot': {
-if (isBan) return reply(mess.banned)
-if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return replay("Give valid link")
-         reply(mess.waiting)
-         let anu = await getBuffer('https://saipulanuar.ga/api/download/ssweb2?url=${args.join(" ")}')
-         Miku.sendMessage(m.chat, { image: anu, caption: `Success` }, { quoted: m })}
-		 break
-//////////////////////////////////////////////			 
+case 'ssweb':  case 'screenshot': {
+  if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+	if (!AntiNsfw) return reply(mess.nonsfw)
+	if (!args.join(" ")) return replay("Example xximage Tits")
+    reply(mess.waiting)
+     waifudhgd = await getBuffer(`https://saipulanuar.ga/api/download/ssweb?url=${args.join(" ")}`)     
+     let nsfwapireply = [
+        {buttonId: `done`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: waifudhgd,
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+	break
+	case '1ssweb':  case '1screenshot': {
+  if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+	if (!AntiNsfw) return reply(mess.nonsfw)
+	if (!args.join(" ")) return replay("Example xximage Tits")
+    reply(mess.waiting)
+     waifudhgd = await getBuffer(`https://saipulanuar.ga/api/download/ssweb2?url=${args.join(" ")}`)     
+     let nsfwapireply = [
+        {buttonId: `done`, buttonText: {displayText: `>>`}, type: 1},
+        ]
+      let nsfwapimess = {
+       image: waifudhgd,
+       caption:  `Here it is...`,
+      buttons: nsfwapireply,
+      headerType: 1
+      }     
+                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
+                        return('Error!')
+                    })
+                }
+	break
+/////////////////////////////////////////////////////////////////////////////////////			 
 			 case 'attp': case 'ttp': {
          if (isBan) return reply(mess.banned)
          if (isBanChat) return reply(mess.bangc)
@@ -5043,7 +5069,7 @@ antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, ant
 
  *━━━〈  🔍 Search 🔍  〉━━━*
 
-play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone, 1wallpaper, 2wallpaper, 3wallpaper  
+play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone, 1wallpaper,  
 
  *━━━〈  🔰 Convert 🔰  〉━━━*
 
