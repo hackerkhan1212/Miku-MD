@@ -4925,7 +4925,7 @@ case '1ssweb': {
                 break
 /////////////////////////////////////////////////////////////////////////////////////			 
 			
-se 'brazzers' : case 'burn' : case 'ddungeon' : case 'deepfry' : case 'dictator' : case 'fire' : case 'gay' : case 'jail' :
+case 'brazzers' : case 'burn' : case 'ddungeon' : case 'deepfry' : case 'dictator' : case 'fire' : case 'gay' : case 'jail' :
 case 'lookwhatkarenhave' : case 'missionpassed' : case 'ps4' : case 'redple' : case 'sharpen' : case 'thanos' : case 'snpier' : case 'instagram' :
 case 'wasted' : case 'utatoo' : case 'rip' : case 'wanted' : case 'beautiful' : case 'blur' : case 'invert' : case 'greyscale' :
 case 'contrast' : case 'sepia' : case 'distort' : case 'glitch' : case 'approved' : case 'rejected' : case '3000years' : case 'circle' : {
