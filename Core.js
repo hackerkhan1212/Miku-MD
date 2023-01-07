@@ -4904,135 +4904,59 @@ replay('Broadcast Sent !')
 }
 break  
 ////////////////////////////////////////////////////////////////		    
-case 'ssweb':  case 'screenshot': {
-  if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-	if (!AntiNsfw) return reply(mess.nonsfw)
-	if (!args.join(" ")) return replay("Example xximage Tits")
-    reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://saipulanuar.ga/api/download/ssweb?url=${args.join(" ")}`)     
-     let nsfwapireply = [
-        {buttonId: `done`, buttonText: {displayText: `>>`}, type: 1},
-        ]
-      let nsfwapimess = {
-       image: waifudhgd,
-       caption:  `Here it is...`,
-      buttons: nsfwapireply,
-      headerType: 1
-      }     
-                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
-                        return('Error!')
-                    })
-                }
-	break
-	case '1ssweb':  case '1screenshot': {
-  if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-	if (!AntiNsfw) return reply(mess.nonsfw)
-	if (!args.join(" ")) return replay("Example xximage Tits")
-    reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://saipulanuar.ga/api/download/ssweb2?url=${args.join(" ")}`)     
-     let nsfwapireply = [
-        {buttonId: `done`, buttonText: {displayText: `>>`}, type: 1},
-        ]
-      let nsfwapimess = {
-       image: waifudhgd,
-       caption:  `Here it is...`,
-      buttons: nsfwapireply,
-      headerType: 1
-      }     
-                await Miku.sendMessage(m.chat, nsfwapimess, { quoted:m }).catch(err => {
-                        return('Error!')
-                    })
-                }
-	break
+ case 'ssweb': {
+	   if (isBan) return reply(mess.banned)	 			
+           if (isBanChat) return reply(mess.bangc)
+                if (!text) throw `Example :  Give valid link`
+                m.reply(mess.wait)
+                waifudhgd = await getBuffer(`https://saipulanuar.ga/api/download/ssweb2?url=${!text}`)
+                await Miku.sendMessage(m.chat, { image: waifudhgd }, { quoted: m })
+				}
+                break
+				
+case '1ssweb': {
+	   if (isBan) return reply(mess.banned)	 			
+           if (isBanChat) return reply(mess.bangc)
+                if (!text) throw `Example :  Give valid link`
+                m.reply(mess.wait)
+                waifudhgd = await getBuffer(`https://saipulanuar.ga/api/download/ssweb2?url=${!text}`)
+                await Miku.sendMessage(m.chat, { image: waifudhgd }, { quoted: m })
+				}
+                break
 /////////////////////////////////////////////////////////////////////////////////////			 
-			 case 'attp': case 'ttp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			 	 case '1attp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/attp2?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			 case '2attp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/attp?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			 	 case '1ttp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			 case '2ttp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp2?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			  case '3ttp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp3?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			 case '4ttp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp4?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			  case '5ttp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp5?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
-			 case '6ttp': {
-         if (isBan) return reply(mess.banned)
-         if (isBanChat) return reply(mess.bangc)
-         if (!args.join(" ")) return replay("Exmaple -attp ibrahim/nttp ibrahim")
-            m.reply(mess.wait)
-           if (!text) throw `Try : ${prefix + command} text`
-           await Miku.sendMedia(m.chat, `https://api.lolhuman.xyz/api/ttp6?apikey=${global.lolhuman}&text=${args.join(" ")}`, 'Ibrahim', 'kurume', fdoc, {asSticker: true})
-         }
-			 break
 			
+se 'brazzers' : case 'burn' : case 'ddungeon' : case 'deepfry' : case 'dictator' : case 'fire' : case 'gay' : case 'jail' :
+case 'lookwhatkarenhave' : case 'missionpassed' : case 'ps4' : case 'redple' : case 'sharpen' : case 'thanos' : case 'snpier' : case 'instagram' :
+case 'wasted' : case 'utatoo' : case 'rip' : case 'wanted' : case 'beautiful' : case 'blur' : case 'invert' : case 'greyscale' :
+case 'contrast' : case 'sepia' : case 'distort' : case 'glitch' : case 'approved' : case 'rejected' : case '3000years' : case 'circle' : {
+   if (!/image/.test(mime)) return m.reply(`*Send/Reply Image With Caption* ${prefix + command}`)
+	        	let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
+                let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)                
+                let anu = await TelegraPh(media)
+                let buf = await getBuffer(`https://api.zeeoneofc.xyz/api/image-effect/${command}?apikey=${global.keysxxx}&url=${anu}`)
+                Miku.sendMessage(m.chat, { image: buf, caption: `Made by ${botname}` }, { quoted: m}).catch ((err) => m.reply(mess.error))
+                }
+                break			
 			 
-			 
-			 
-////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////
 
 case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
@@ -5080,6 +5004,10 @@ bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, s
 
 bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
 
+ *━━━〈  🔰 Image effect 🔰  〉━━━*
+ 
+ brazzers, burn, ddungeon, deepfry, dictator, fire, gay, jail, lookwhatkarenhave, missionpassed, ps4, redple, sharpen, thanos, snpier, instagram, wasted, utatoo, rip, wanted, beautiful, blur, invert, greyscale, contrast, sepiavdistort , litch, approved, rejected, 3000years, circle 
+ 
  *━━━〈  🌌 Downloader 🌌  〉━━━*
 
 play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire, soundcloud  
@@ -5090,7 +5018,7 @@ play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitte
  
  *━━━〈  🎗 Sticker 🎗  〉━━━*
  
- attp(1-2), ttp(1-6)
+ 
  
  *━━━〈  🈴 Weeb 🈴  〉━━━*
 
