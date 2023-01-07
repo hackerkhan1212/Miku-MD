@@ -20,9 +20,8 @@ global.sessionName = "session"
 
 global.keysZens = ['285c513f6556', '68637855ac', '66aa575454', 'ead81e891b', '8331b843f7', 'ec3fe6f05831', '0c65d4c037']
 global.zenzkey = keysZens[Math.floor(keysZens.length * Math.random())]
-
-
-
+global.ibrahim = ['TcjDtsMJ', 'kUF2aBjM', '2nlLuqfy', 'rErGxBzr', 'KMCJgIRH','m242ANUO', 'WoH9KRqY', 'qjOpwJIA', 'xsTFGsFc', 'wYBojGOu']
+global.keysxxx = ibrahim[Math.floor(ibrahim.length * Math.random())]
 global.prefa = ['-'] // Prefix ---  change it to anythong you want except @//
 
 
@@ -31,7 +30,7 @@ global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4' }
 global.websitex = "https://github.com/Thewiskey"
-global.lolhuman = "85faf717d0545d14074659ad"
+global.lolhuman = "SadTeams"
 
 
 global.BotLogo = fs.readFileSync("./Assets/pic1.jpg")
